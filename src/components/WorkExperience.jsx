@@ -169,19 +169,6 @@ export default function WorkExperience() {
                           <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg>
                       </a>
-                      <a
-                        href={exp.sourceCode}
-                        target="_blank"
-                        rel="noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-[13px] font-medium text-violet-300 border border-violet-500/30 bg-violet-500/10 hover:bg-violet-500/25 hover:border-violet-400/60 hover:text-white transition-all duration-200 group/btn"
-                      >
-                        Source Code
-                        <svg className="w-3.5 h-3.5 transition-transform duration-200 group-hover/btn:translate-x-1"
-                          viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M5 12h14M12 5l7 7-7 7" />
-                        </svg>
-                      </a>
                     </div>
                   </div>
                 </div>
