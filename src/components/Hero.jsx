@@ -1,16 +1,18 @@
 import { motion } from 'framer-motion'
 import avatar from "../assets/Me.png"
+import gradient from "../assets/gradient.png"
 
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+
       {/* Purple glow background */}
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute rounded-full"
           style={{
-            width: '600px',
-            height: '600px',
+            width: 'clamp(300px, 60vw, 600px)',
+            height: 'clamp(300px, 60vw, 600px)',
             top: '50%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
@@ -20,70 +22,60 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative z-10 flex flex-col items-center text-center px-6">
-        {/* Speech bubble + Memoji */}
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 px-6 max-w-5xl w-full mx-auto">
+
+        {/* ── Avatar side ── */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="relative flex items-center justify-center mb-6"
+          className="relative flex items-center justify-center flex-shrink-0"
         >
           {/* Speech bubble */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 0.5 }}
-            className="absolute -top-8 -left-45 text-xl text-gray-300 bg-[#1a1030] border border-purple-900/50 px-3 py-1.5 rounded-full whitespace-nowrap"
-            style={{ transform: 'translateX(-20%)' }}
+            className="absolute -top-10 left-1/2 -translate-x-1/2 md:left-auto md:-translate-x-0 md:-top-8 md:-left-4 text-sm md:text-base text-gray-300 bg-[#1a1030] border border-purple-900/50 px-4 py-2 rounded-full whitespace-nowrap z-20"
           >
             Hello! I Am{' '}
             <span className="text-purple-400 font-semibold">Manan Dubla</span>
           </motion.div>
 
-          {/* Memoji image - replace src with your actual image */}
-          <div className="relative w-66 h-66 flex items-center justify-center">
-            {/* Gradient blob behind memoji */}
+          {/* Avatar container */}
+          <div className="relative w-52 h-52 sm:w-60 sm:h-60 md:w-72 md:h-72 flex items-center justify-center mt-10 md:mt-0">
             <img
-              src="./src/assets/gradient.png"
+              src={gradient}
               alt=""
               className="absolute inset-0 w-full h-full object-contain"
             />
-            {/* Memoji on top */}
             <img
               src={avatar}
               alt="Manan Dubla"
-              className="relative z-10 w-70 h-70"
+              className="relative z-10 w-full h-full object-contain"
             />
           </div>
         </motion.div>
 
-        {/* Headline */}
+        {/* ── Text side ── */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.7 }}
-          className="text-left max-w-xl"
+          className="text-center md:text-left max-w-xl"
         >
-          <p className="text-gray-300 text-s mb-1">A Developer who</p>
-          <h1
-            className="text-5xl md:text-6xl font-bold text-white leading-tight"
-          >
+          <p className="text-gray-400 text-sm mb-2 tracking-wide">A Developer who</p>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
             Builds things
             <br />
             for the{' '}
-            <span
-              className="relative inline-block"
-              style={{
-                color: '#a855f7',
-              }}
-            >
-              web...
-            </span>
+            <span className="text-purple-400">web...</span>
           </h1>
-          <p className="text-gray-300 text-s mt-3">
+          <p className="text-gray-400 text-sm mt-4 leading-relaxed">
             Turning ideas into interfaces people remember.
           </p>
         </motion.div>
+
       </div>
     </section>
   )

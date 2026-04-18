@@ -26,7 +26,7 @@ export default function Contact() {
         </p>
 
         {/* Social links */}
-        <div className="flex items-center gap-6">
+        <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 md:gap-6">
           <a
             href="https://instagram.com"
             target="_blank"
@@ -52,13 +52,15 @@ export default function Contact() {
             LinkedIn
           </a>
           <a
-              href="https://mail.google.com/mail/?view=cm&to=manansworkspace@gmail.com" target="_blank" rel="noreferrer"
-            className="text-gray-400 hover:text-white transition-colors text-sm"
+            href="https://mail.google.com/mail/?view=cm&to=manansworkspace@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+            className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm break-all"
           >
             manansworkspace@gmail.com
-          </a>
-        </div>
-      </motion.div>
-    </section>
+          </a >
+        </div >
+      </motion.div >
+    </section >
   )
 }
