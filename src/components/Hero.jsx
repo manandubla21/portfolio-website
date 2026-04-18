@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import avatar from "../assets/Me.png"
 
 export default function Hero() {
   return (
@@ -49,9 +50,9 @@ export default function Hero() {
             />
             {/* Memoji on top */}
             <img
-              src="./src/assets/Me.png"
+              src={avatar}
               alt="Manan Dubla"
-              className="relative z-10 w-70 h-70 object-contain"
+              className="relative z-10 w-70 h-70"
             />
           </div>
         </motion.div>
