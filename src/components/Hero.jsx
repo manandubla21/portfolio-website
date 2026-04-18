@@ -49,7 +49,7 @@ export default function Hero() {
             />
             {/* Memoji on top */}
             <img
-              src="./src/assets/Me.svg"
+              src="./src/assets/Me.png"
               alt="Manan Dubla"
               className="relative z-10 w-70 h-70 object-contain"
             />
